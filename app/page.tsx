@@ -245,7 +245,7 @@ const books: Book[] = useMemo(
                 I design end-to-end data solutions that turn messy, real-world data into clear insights, predictive
                 models, and scalable pipelines. With a Master’s in Applied Statistics & Data Science and hands-on
                 experience delivering production analytics and ML solutions, I specialize in analytics, machine
-                learning, and automation — from ETL pipelines and forecasting models to executive dashboards and deployed
+                learning, and automation from ETL pipelines and forecasting models to executive dashboards and deployed
                 APIs.
                 <br />
                 <b>My focus is simple: make data reliable, insights actionable, and solutions scalable.</b>
