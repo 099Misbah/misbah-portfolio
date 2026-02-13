@@ -124,7 +124,7 @@ export default function Home() {
       {
         title: "IBM Python Project for Data Science",
         issuer: "IBM",
-        image: "/images/Badges/Badge.jpeg",
+        image: "/images/badges/Badge.jpeg",
       },
     ],
     []
