@@ -124,7 +124,7 @@ export default function Home() {
       {
         title: "IBM Python Project for Data Science",
         issuer: "IBM",
-        image: "/images/badges/badge.jpeg",
+        image: "/images/Badges/badge.jpeg",
       },
     ],
     []
@@ -133,37 +133,37 @@ const books: Book[] = useMemo(
   () => [
     {
       title: "The Go-Giver",
-      image: "/images/books/go.jpeg",
+      image: "/images/Books/go.jpeg",
       takeaway: "Lead with value first: focus on giving more in service/value than you take in payment.",
     },
     {
       title: "Atomic Habits",
-      image: "/images/books/atomic.jpg",
+      image: "/images/Books/atomic.jpg",
       takeaway: "Build systems, not goals: small habits compound into big results over time.",
     },
     {
       title: "The Miracle Morning",
-      image: "/images/books/miracle.png",
+      image: "/images/Books/miracle.png",
       takeaway: "Start the day intentionally: a consistent morning routine boosts focus and execution.",
     },
     {
       title: "The Art of Bouncing Back",
-      image: "/images/books/bouncing.jpeg",
+      image: "/images/Books/bouncing.jpeg",
       takeaway: "Resilience is trainable: reframe setbacks and take small actions to regain momentum.",
     },
     {
       title: "The Confident Mind",
-      image: "/images/books/confident.jpeg",
+      image: "/images/Books/confident.jpeg",
       takeaway: "Confidence comes from preparation + self-talk: control what you can, release the rest.",
     },
     {
       title: "The Servant",
-      image: "/images/books/servant.jpg",
+      image: "/images/Books/servant.jpg",
       takeaway: "Leadership = service: trust and influence come from empathy, listening, and consistency.",
     },
     {
       title: "No Excuse",
-      image: "/images/books/no.jpeg",
+      image: "/images/Books/no.jpeg",
       takeaway: "Success is built on self-discipline. Take full responsibility, eliminate excuses, and execute consistently even when motivation is low.",
     },
   ],
