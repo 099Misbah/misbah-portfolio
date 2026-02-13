@@ -83,37 +83,37 @@ export default function Home() {
         title: "IBM Data Science Professional Certificate",
         issuer: "IBM / Coursera",
         date: "Issued 2025",
-        image: "/images/certificate/DSpro.jpg",
+        image: "/images/certificates/dspro.jpg",
       },
       {
         title: "SQL (Intermediate)",
         issuer: "HackerRank",
         date: "Issued Oct 2025",
-        image: "/images/certificate/SQLin.jpg",
+        image: "/images/certificates/sqlin.jpg",
       },
       {
         title: "Machine Learning with Python",
         issuer: "IBM / Coursera",
         date: "2025",
-        image: "/images/certificate/ML.jpg",
+        image: "/images/certificates/ml.jpg",
       },
       {
         title: "Database and SQL for Data Science with Python",
         issuer: "IBM / Coursera",
         date: "2025",
-        image: "/images/certificate/DB&sql.jpg",
+        image: "/images/certificates/dbsql.jpg",
       },
       {
         title: "Python for Data Science, AI & Development",
         issuer: "IBM / Coursera",
         date: "2025",
-        image: "/images/certificate/py-AI.jpg",
+        image: "/images/certificates/pyai.jpg",
       },
       {
         title: "Data Analyst with Python",
         issuer: "IBM / Coursera",
         date: "2025",
-        image: "/images/certificate/DA.jpg",
+        image: "/images/certificates/da.jpg",
       },
     ],
     []
@@ -124,7 +124,7 @@ export default function Home() {
       {
         title: "IBM Python Project for Data Science",
         issuer: "IBM",
-        image: "/images/badges/Badge.jpeg",
+        image: "/images/badges/badge.jpeg",
       },
     ],
     []
