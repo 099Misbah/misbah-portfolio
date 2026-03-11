@@ -10,49 +10,17 @@ type Project = {
 
 const projects: Project[] = [
   // ⭐ Featured (Tier 1)
-  {
-    title: "Tesla Stock Forecasting & Time Series Analysis",
-    slug: "tesla",
-    tier: "Featured",
-    oneLiner:
-      "Time-series modeling and forecasting using ARIMA/ETS/SARIMA with diagnostics and evaluation.",
-    tags: ["Python", "Time Series", "ARIMA/SARIMA"],
-    github: "https://github.com/099Misbah/Tesla-Stock-Price-Analysis",
-  },
-  {
-    title: "Global Startup Ecosystem: Funding & Growth Analysis",
-    slug: "startup-ecosystem",
-    tier: "Featured",
-    oneLiner:
-      "End-to-end pipeline + Power BI dashboard + ML classification to predict funding outcomes.",
-    tags: ["Power BI", "Python", "ML", "ETL"],
-  },
-  {
-    title: "Freight Fraud Detection & Risk Analytics",
-    slug: "fraud-detection",
-    tier: "Featured",
-    oneLiner:
-      "Fraud-risk classification with model comparison and KPI dashboards for monitoring.",
-    tags: ["Python", "scikit-learn", "Power BI", "SQL"],
-  },
-  {
-    title: "Cloud-Based ETL Pipeline for Logistics Data (AWS)",
-    slug: "aws-etl",
-    tier: "Featured",
-    oneLiner:
-      "Automated AWS ETL pipeline (S3/Glue/Lambda) with data validation and operational KPIs.",
-    tags: ["AWS", "Glue", "Lambda", "ETL", "Power BI"],
-  },
+  
+
+  // 📘 Additional (Tier 2)
   {
     title: "NLP-Powered Data Career & Job Scam Detection Bot",
     slug: "nlp-bot",
-    tier: "Featured",
+    tier: "Additional",
     oneLiner:
       "Streamlit NLP chatbot using TF-IDF + Logistic Regression for intent classification and guidance.",
     tags: ["NLP", "Streamlit", "Python", "scikit-learn"],
   },
-
-  // 📘 Additional (Tier 2)
   {
     title: "Automatic Number Plate Recognition (ANPR)",
     slug: "anpr",
@@ -97,7 +65,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 }
 
 export default function ProjectsPage() {
-  const featured = projects.filter((p) => p.tier === "Featured");
+  //const featured = projects.filter((p) => p.tier === "Featured");
   const additional = projects.filter((p) => p.tier === "Additional");
 
   return (
@@ -111,42 +79,6 @@ export default function ProjectsPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-10">
-        <div className="rounded-2xl border bg-white p-6 shadow-sm">
-          <SectionTitle>Featured Projects</SectionTitle>
-
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            {featured.map((p) => (
-              <a
-                key={p.slug}
-                href={`/projects/${p.slug}`}
-                className="group rounded-2xl border border-gray-200 bg-white p-5 hover:bg-gray-50"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-sm font-semibold text-gray-900 group-hover:underline">
-                    {p.title}
-                  </h3>
-                  <span className="rounded-full border border-gray-200 bg-white px-2 py-1 text-[11px] text-gray-600">
-                    Featured
-                  </span>
-                </div>
-
-                <p className="mt-2 text-sm text-gray-700">{p.oneLiner}</p>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <Pill key={t}>{t}</Pill>
-                  ))}
-                </div>
-
-                {p.github && (
-                  <p className="mt-3 text-xs text-gray-600 break-all">
-                    GitHub: <span className="underline">{p.github}</span>
-                  </p>
-                )}
-              </a>
-            ))}
-          </div>
-        </div>
 
         <div className="mt-6 rounded-2xl border bg-white p-6 shadow-sm">
           <SectionTitle>Additional Projects</SectionTitle>
