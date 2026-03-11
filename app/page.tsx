@@ -88,8 +88,8 @@ const allProjects: Project[] = [
   },
   {
     title: "Customer Churn Prediction",
-    href: "/projects/customer-churn",
-    image: "/images/projects/customer-churn/cover.png",
+    href: "/projects/customer churn",
+    image: "/images/projects/customer churn/cover.png",
     oneLiner:
       "Classification pipeline to predict customer churn using telecom data. Feature engineering, model comparison, and an interactive dashboard to support retention strategy decisions.",
     tags: ["Classification", "Feature Engineering", "Tableau", "Python"],
@@ -98,7 +98,7 @@ const allProjects: Project[] = [
   {
     title: "Demand Forecasting & Inventory Optimization",
     href: "/projects/demand-forecasting",
-    image: "/images/projects/demand-forecasting/cover.png",
+    image: "/images/projects/demand-forecasting/cover.jpg",
     oneLiner:
       "Time series forecasting system using ARIMA, Prophet, and XGBoost with lag features and rolling averages. FastAPI forecast endpoint and Tableau dashboard showing predicted vs actual demand with inventory recommendations.",
     tags: ["Prophet", "XGBoost", "ARIMA", "FastAPI", "Tableau"],
@@ -107,7 +107,7 @@ const allProjects: Project[] = [
   {
     title: "SQL + BI Analytics Dashboard",
     href: "/projects/sql-bi-analytics",
-    image: "/images/projects/sql-bi-analytics/cover.png",
+    image: "/images/projects/sql-bi-analytics/cover.jpg",
     oneLiner:
       "Pure analytics project built with advanced SQL queries and Power BI to surface business insights from sales and HR data. Designed for stakeholder-ready reporting with KPI definitions and drill-through dashboards.",
     tags: ["SQL", "Power BI", "DAX", "KPI Design"],
@@ -116,7 +116,7 @@ const allProjects: Project[] = [
   {
     title: "NLP-Powered Data Career Bot",
     href: "/projects/nlp-career-bot",
-    image: "/images/projects/nlp-career-bot/cover.png",
+    image: "/images/projects/nlp-career-bot/cover.jpg",
     oneLiner:
       "Streamlit chatbot helping job seekers detect scams, improve resumes, and explore data roles. Built with TF-IDF + Logistic Regression for intent classification. Planned upgrade with GPT/HuggingFace for smarter responses.",
     tags: ["NLP", "TF-IDF", "Streamlit", "Logistic Regression"],
