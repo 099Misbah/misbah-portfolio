@@ -67,6 +67,7 @@ const allProjects: Project[] = [
       "Time-series forecasting pipeline analyzing trends, volatility, and seasonality in Tesla stock data. Compared ARIMA and SARIMA models using ACF/PACF diagnostics to generate short-term forecasts and decision-ready insights.",
     tags: ["Time Series", "ARIMA", "SARIMA", "Statistical Modeling"],
     status: "live",
+    liveLink:"https://public.tableau.com/views/TeslaStockForecastingTimeSeriesAnalysis/TeslaStockForecastingTimeSeriesAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
   },
   {
     title: "Global Startup Ecosystem Analytics Platform",
