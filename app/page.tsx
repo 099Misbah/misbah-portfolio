@@ -39,6 +39,7 @@ type Project = {
   tags: string[];
   status: "live" | "dev";
   liveLink?: string;
+  caseStudy?: string;
 };
 
 type Book = {
@@ -58,6 +59,7 @@ const allProjects: Project[] = [
     tags: ["XGBoost", "SMOTE", "FastAPI", "Tableau", "ML Pipeline"],
     status: "live",
     liveLink: "https://public.tableau.com/views/ShipmentDelayPredictionMLAnalyticsDashboard/ShipmentDelayAnalysis",
+    caseStudy: "/case-studies/Shipment_Delay_Case_Study.docx",
   },
   {
     title: "Tesla Stock Forecasting & Time Series Analysis",
@@ -67,7 +69,8 @@ const allProjects: Project[] = [
       "Time-series forecasting pipeline analyzing trends, volatility, and seasonality in Tesla stock data. Compared ARIMA and SARIMA models using ACF/PACF diagnostics to generate short-term forecasts and decision-ready insights.",
     tags: ["Time Series", "ARIMA", "SARIMA", "Statistical Modeling"],
     status: "live",
-    liveLink:"https://public.tableau.com/views/TeslaStockForecastingTimeSeriesAnalysis/TeslaStockForecastingTimeSeriesAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    liveLink: "https://public.tableau.com/views/TeslaStockForecastingTimeSeriesAnalysis/TeslaStockForecastingTimeSeriesAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    caseStudy: "/case-studies/Tesla_Stock_Case_Study.docx",
   },
   {
     title: "Global Startup Ecosystem Analytics Platform",
@@ -89,7 +92,7 @@ const allProjects: Project[] = [
   },
   {
     title: "Customer Churn Prediction",
-    href: "/projects/customer churn",
+    href: "/projects/customer-churn",
     image: "/images/projects/customer churn/cover.png",
     oneLiner:
       "Classification pipeline to predict customer churn using telecom data. Feature engineering, model comparison, and an interactive dashboard to support retention strategy decisions.",
@@ -241,7 +244,6 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 pt-10">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
           <div className="px-6 py-10 md:px-10">
-            {/* Open to work badge */}
             <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               Open to Work · Dallas, TX
@@ -333,8 +335,6 @@ export default function Home() {
                 <br />
                 <b>My focus: make data reliable, insights actionable, and solutions scalable.</b>
               </p>
-
-            
             </div>
           </div>
         </div>
@@ -348,7 +348,6 @@ export default function Home() {
           <div className="rounded-2xl border bg-white p-6 shadow-sm">
             <SectionTitle>Skills</SectionTitle>
 
-            {/* Languages row — full width, first */}
             <div className="mt-5 rounded-2xl border border-gray-200 bg-gray-50 p-5">
               <h3 className="text-sm font-semibold text-gray-900">Languages</h3>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -421,6 +420,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           {/* ── PROJECTS ───────────────────────────────────────────────── */}
           <div className="rounded-2xl border bg-white p-6 shadow-sm">
             <SectionTitle>Projects</SectionTitle>
@@ -459,9 +459,19 @@ export default function Home() {
                     </div>
 
                     <div className="mt-3 flex items-center gap-3">
-                      <Link href={p.href} className="text-xs font-medium text-gray-900 hover:underline">
-                        Case study →
-                      </Link>
+                      {p.caseStudy ? (
+                        <a
+                          href={p.caseStudy}
+                          download
+                          className="text-xs font-medium text-gray-900 hover:underline"
+                        >
+                          Case study →
+                        </a>
+                      ) : (
+                        <Link href={p.href} className="text-xs font-medium text-gray-900 hover:underline">
+                          Case study →
+                        </Link>
+                      )}
                       {p.liveLink && (
                         <a
                           href={p.liveLink}
@@ -489,20 +499,20 @@ export default function Home() {
                   className="overflow-hidden rounded-2xl border border-dashed border-gray-300 bg-gray-50 flex flex-col opacity-80"
                 >
                   <div className="relative h-36 w-full bg-gray-100 shrink-0">
-                      <Image
-                        src={p.image}
-                        alt={p.title}
-                        fill
-                        className="object-cover opacity-60"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                      <span className="absolute top-2 left-2 rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-[10px] font-semibold text-amber-600">
-                        In Dev
-                      </span> </div>
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      className="object-cover opacity-60"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <span className="absolute top-2 left-2 rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-[10px] font-semibold text-amber-600">
+                      In Dev
+                    </span>
+                  </div>
                   <div className="flex flex-col flex-1 p-4">
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="text-sm font-semibold text-gray-700 leading-snug">{p.title}</h3>
-                      
                     </div>
                     <p className="mt-2 text-xs leading-relaxed text-gray-500 flex-1">{p.oneLiner}</p>
                     <div className="mt-3 flex flex-wrap gap-1.5">
