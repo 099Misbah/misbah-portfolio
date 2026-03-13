@@ -249,6 +249,7 @@ const allProjects: Project[] = [
       "End-to-end analytics solution combining ETL pipelines, Power BI KPI dashboards, and ML models (96.5% accuracy) to predict Series A funding success from seed-stage features across 54K+ startup records.",
     tags: ["Power BI", "ETL Pipeline", "Random Forest", "DAX"],
     status: "live",
+    liveLink: "https://public.tableau.com/views/GlobalStartupEcosystemAnalytics/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   },
   {
     title: "Freight Fraud Detection & Risk Analytics",
