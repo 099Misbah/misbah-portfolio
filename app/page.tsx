@@ -440,7 +440,7 @@ export default function Home() {
             </p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">Misbah Shaikh</h1>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-200/80 md:text-base">
-              Building intelligent data science solutions — from end-to-end ML pipelines and predictive models to executive dashboards and deployed APIs.
+              Building intelligent data science solutions from end-to-end ML pipelines and predictive models to executive dashboards and deployed APIs.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <Pill>Python</Pill><Pill>SQL</Pill><Pill>Tableau</Pill><Pill>Power BI</Pill>
@@ -477,8 +477,7 @@ export default function Home() {
               </div>
               <p className="mt-4 text-sm leading-relaxed text-gray-700">
                 I design end-to-end data science solutions that turn messy, real-world data into predictive models, clear insights, and scalable pipelines.
-                With a Master's in Applied Statistics & Data Science and hands-on experience building ML systems, analytics pipelines, and BI dashboards —
-                I bring the full data science lifecycle to every project.
+                With a Master's in Applied Statistics & Data Science and hands-on experience building ML systems, analytics pipelines, and BI dashboards. I bring the full data science lifecycle to every project.
                 <br /><b>My focus: build models that work, pipelines that scale, and dashboards that drive decisions.</b>
               </p>
             </div>
