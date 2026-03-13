@@ -218,6 +218,85 @@ const teslaCaseStudy: CaseStudy = {
   ],
 };
 
+const startupCaseStudy: CaseStudy = {
+  title: "Global Startup Ecosystem Analytics Platform",
+  subtitle: "ETL Pipeline · Random Forest 96.5% · Power BI & Tableau · 54K+ Records",
+  github: "https://github.com/099Misbah/-Global-Startup-Ecosystem",
+  liveLink: "https://public.tableau.com/views/GlobalStartupEcosystemAnalytics/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+  stats: [
+    { label: "Records", value: "54K+" },
+    { label: "RF Accuracy", value: "96.5%" },
+    { label: "LR Accuracy", value: "95.8%" },
+    { label: "F1 Score", value: "0.96+" },
+    { label: "Countries", value: "20" },
+    { label: "Sectors", value: "12" },
+  ],
+  sections: [
+    {
+      heading: "Overview",
+      content:
+        "This project builds an end-to-end analytics solution on 54K+ global startup records — combining ETL pipelines, exploratory data analysis, interactive Tableau dashboards, and ML models to predict whether a startup will successfully raise Series A funding based on seed-stage features. The goal: turn raw, messy startup funding data into actionable intelligence for investors and analysts.",
+    },
+    {
+      heading: "Data Pipeline & Cleaning",
+      content: "The raw dataset required significant preprocessing before any analysis:",
+      bullets: [
+        "Handled missing values across funding amounts, country codes, and market categories",
+        "Standardized inconsistent country names and market/sector labels",
+        "Removed duplicates and outliers in funding amounts",
+        "Engineered features: funding round encoded, founded year bucketed, region derived from country",
+      ],
+    },
+    {
+      heading: "Exploratory Data Analysis — Key Findings",
+      content: "",
+      bullets: [
+        "USA dominates with 18,500+ startups — 5x more than the next country (UK: 3,200)",
+        "Software is the top funded sector at $123,770M total — nearly 2x Biotechnology",
+        "Biotechnology has the highest survival rate at 86.8% — Mobile has the lowest at 85%",
+        "Funding has remained relatively stable 2005–2021 at ~$30K average per year cohort",
+        "Series A raise rate correlates most strongly with total funding amount and funding round",
+      ],
+    },
+    {
+      heading: "Machine Learning — Series A Prediction",
+      content: "Target: predict whether a startup will raise Series A funding (binary classification).",
+      bullets: [
+        "Logistic Regression — Accuracy: 95.8% · Precision: 96.1% · Recall: 95.8% · F1: 0.959 · ROC-AUC: 0.981",
+        "Random Forest — Accuracy: 96.5% · Precision: 96.8% · Recall: 96.5% · F1: 0.966 · ROC-AUC: 0.992 ✅ BEST",
+        "Top features: Total funding amount (31.2%), Funding round (22.8%), Founded year (14.7%)",
+        "Random Forest outperformed LR by capturing non-linear interactions between funding features",
+        "High precision means fewer false positives — investors get reliable signals, not noise",
+      ],
+    },
+    {
+      heading: "Tableau Dashboard — 5 Views",
+      content: "",
+      bullets: [
+        "Funding Map — Global bubble map. Circle size + color = total funding. USA dominates.",
+        "Top Sectors — Horizontal bar chart. Software leads at $123,770M. Color-coded by sector.",
+        "Funding Trend — Line chart 2005–2021. Stable funding patterns with slight upward trend.",
+        "Survival Rates — Color-gradient bar chart. Biotechnology highest, Mobile lowest.",
+        "ML Model Performance — Side-by-side bar: LR vs Random Forest across Accuracy, F1, ROC-AUC.",
+      ],
+    },
+    {
+      heading: "Business Impact",
+      content: "",
+      bullets: [
+        "Investors can filter by country, sector, and year to identify high-potential markets",
+        "96.5% accurate Series A predictor reduces time spent evaluating low-probability startups",
+        "Survival rate analysis guides sector allocation decisions in early-stage portfolios",
+        "Dashboard requires no technical skills — built for analyst and executive audiences",
+      ],
+    },
+    {
+      heading: "Technology Stack",
+      content: "Python · Pandas · Scikit-Learn · Random Forest · Logistic Regression · Tableau · Power BI · Git/GitHub",
+    },
+  ],
+};
+
 const allProjects: Project[] = [
   {
     title: "Shipment Delay Prediction System",
@@ -250,6 +329,7 @@ const allProjects: Project[] = [
     tags: ["Power BI", "ETL Pipeline", "Random Forest", "DAX"],
     status: "live",
     liveLink: "https://public.tableau.com/views/GlobalStartupEcosystemAnalytics/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    caseStudy: startupCaseStudy,
   },
   {
     title: "Freight Fraud Detection & Risk Analytics",
@@ -356,11 +436,11 @@ export default function Home() {
               Open to Work · Dallas, TX
             </span>
             <p className="mt-4 text-xs font-medium text-slate-200/70 tracking-widest uppercase">
-              Data Science • ML Engineering • Analytics
+              Data Science • Predictive Modeling • Analytics
             </p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">Misbah Shaikh</h1>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-200/80 md:text-base">
-              Building intelligent, automated analytics & AI-powered solutions from raw data pipelines to deployed ML models and executive dashboards.
+              Building intelligent data science solutions — from end-to-end ML pipelines and predictive models to executive dashboards and deployed APIs.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <Pill>Python</Pill><Pill>SQL</Pill><Pill>Tableau</Pill><Pill>Power BI</Pill>
@@ -375,7 +455,7 @@ export default function Home() {
                   <Image src="/images/mainprofile.jpg" alt="Misbah Shaikh" width={80} height={80}
                     className="rounded-full object-cover ring-4 ring-white md:h-20 md:w-20" />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Data Scientist & ML Engineer</p>
+                    <p className="text-sm font-semibold text-gray-900">Data Scientist</p>
                     <p className="mt-0.5 text-xs text-gray-500">M.S. Applied Statistics & Data Science · UT Arlington · GPA 3.88</p>
                     <p className="mt-0.5 text-xs text-gray-500">Dallas, TX · Available for full-time roles</p>
                   </div>
@@ -396,10 +476,10 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-gray-700">
-                I design end-to-end data solutions that turn messy, real-world data into clear insights, predictive models, and scalable pipelines.
-                With a Masters in Applied Statistics & Data Science and hands-on experience in ML engineering, analytics, and BI. I build everything
-                from automated ETL pipelines and forecasting models to deployed APIs and executive dashboards.
-                <br /><b>My focus: make data reliable, insights actionable, and solutions scalable.</b>
+                I design end-to-end data science solutions that turn messy, real-world data into predictive models, clear insights, and scalable pipelines.
+                With a Master's in Applied Statistics & Data Science and hands-on experience building ML systems, analytics pipelines, and BI dashboards —
+                I bring the full data science lifecycle to every project.
+                <br /><b>My focus: build models that work, pipelines that scale, and dashboards that drive decisions.</b>
               </p>
             </div>
           </div>
@@ -421,7 +501,7 @@ export default function Home() {
             </div>
             <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                <h3 className="text-sm font-semibold text-gray-900">Machine Learning & AI</h3>
+                <h3 className="text-sm font-semibold text-gray-900">Data Science & ML</h3>
                 <p className="mt-2 text-sm text-gray-700">Predictive modeling, classification & regression, time series forecasting, NLP, deep learning fundamentals, RAG & LLM engineering</p>
                 <p className="mt-3 text-xs text-gray-500"><b>Libraries:</b> Scikit-learn, XGBoost, Random Forest, Logistic Regression, TensorFlow, PyTorch, SMOTE, ARIMA/SARIMA, Prophet, SHAP, FAISS, HuggingFace</p>
               </div>
@@ -615,7 +695,6 @@ export default function Home() {
             className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Sticky header */}
             <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b bg-white p-5">
               <div>
                 <p className="text-base font-bold text-gray-900">{openCaseStudy.title}</p>
@@ -631,7 +710,6 @@ export default function Home() {
             </div>
 
             <div className="p-5 space-y-6">
-              {/* Stats bar */}
               <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
                 {openCaseStudy.stats.map((s) => (
                   <div key={s.label} className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-center">
@@ -641,7 +719,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Sections */}
               {openCaseStudy.sections.map((sec) => (
                 <div key={sec.heading}>
                   <div className="flex items-center gap-3 mb-2">
@@ -664,7 +741,6 @@ export default function Home() {
                 </div>
               ))}
 
-              {/* Links */}
               <div className="flex flex-wrap gap-3 pt-2 border-t">
                 <a href={openCaseStudy.github} target="_blank" rel="noreferrer"
                   className="flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
