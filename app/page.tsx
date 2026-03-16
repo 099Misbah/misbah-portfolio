@@ -469,7 +469,7 @@ export default function Home() {
                     className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50">
                     <FaLinkedin className="text-lg text-blue-600" /> LinkedIn
                   </a>
-                  <a href="/images/resume.pdf" target="_blank" rel="noreferrer"
+                  <a href="/images/resume-misbah.pdf" target="_blank" rel="noreferrer"
                     className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50">
                     <FaFileAlt className="text-lg text-gray-600" /> Resume
                   </a>
